@@ -1,0 +1,7 @@
+{% for id, car in car_data.items() %}
+<div>
+    <p>Car ID: {{ id }}</p>
+    <h2>{{ car['name'] }}</h2>
+    <p>Year: {{car['year']}}</p>
+    <p>Selling Price: {{car['selling_price']}}</p>
+</div>

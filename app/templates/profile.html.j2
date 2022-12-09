@@ -1,0 +1,18 @@
+<h1>User: {{ name }}</h1>
+<h2>User Info:</h2>
+<ul>
+    <li>User ID: {{ user_id }}</li>
+    <li>Email: {{ email }}</li>
+    <li>Favorite Color: {{ favorite_color }}</li>
+    <li>Is Active: {{ is_active }}</li>
+</ul>
+{% if is_active %}
+    <h2>Reviews:</h2>
+    {% for review in reviews %}
+        <div>
+            {{ review }}
+        </div>
+    {% endfor %}
+{% else %}
+    <h2>No reviews for inactive users</h2>
+{% endif %}
